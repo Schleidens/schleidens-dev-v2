@@ -12,6 +12,8 @@ section.portfolio {
     align-items: center;
     justify-content: center;
 
+    padding: 0 1em;
+
     &-items {
       display: flex;
       flex-direction: column;
@@ -27,6 +29,7 @@ section.portfolio {
         position: relative;
 
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
 
         background-size: cover;
@@ -35,6 +38,11 @@ section.portfolio {
         border-radius: 30px;
 
         padding: 1em 2em;
+
+        @media (max-width: 900px) {
+          max-height: unset;
+          flex-wrap: wrap-reverse;
+        }
 
         &__title {
           max-width: 438px;
@@ -52,6 +60,11 @@ section.portfolio {
           font-size: 20px;
 
           color: #585f6f;
+
+          @media (max-width: 900px) {
+            max-width: 100%;
+            width: 100%;
+          }
         }
 
         &__tags {
@@ -60,6 +73,11 @@ section.portfolio {
           gap: 10px;
 
           max-width: 442px;
+
+          @media (max-width: 900px) {
+            max-width: 100%;
+            width: 100%;
+          }
 
           span {
             background-color: #fff;
@@ -103,6 +121,11 @@ section.portfolio {
           background-repeat: no-repeat;
 
           border-radius: 15px;
+
+          @media (max-width: 900px) {
+            max-width: 100%;
+            width: 100%;
+          }
         }
       }
     }
