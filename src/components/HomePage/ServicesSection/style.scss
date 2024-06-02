@@ -3,6 +3,8 @@ section.services {
   justify-content: center;
   align-items: center;
 
+  padding: 2em 0;
+
   .services__content {
     max-width: 1281px;
     width: 100%;
@@ -13,10 +15,19 @@ section.services {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+
+      margin-bottom: 3em;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+      }
 
       .subtitle {
-        font-size: 19px;
+        font-size: 26px;
+
+        font-weight: bold;
       }
     }
 
@@ -38,8 +49,12 @@ section.services {
       .item {
         width: calc(33.333% - 70px);
 
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
         @media (max-width: 900px) {
-          width: 100%;
+          width: calc(100% - 70px);
 
           margin-top: 2em;
           padding: 0 1em;
@@ -53,8 +68,6 @@ section.services {
           font-weight: bold;
 
           font-size: 22px;
-
-          margin-bottom: 0.5em;
         }
 
         &-subtitle {
@@ -62,15 +75,16 @@ section.services {
           font-weight: light;
 
           color: rgb(97, 97, 97);
-
-          margin-bottom: 0.5em;
         }
 
         ul {
-          padding: 0 1.5em;
+          padding: 0;
+          margin: 0;
 
           font-weight: 600;
           font-size: 15px;
+
+          list-style: none;
 
           li {
             margin: 5px 0;

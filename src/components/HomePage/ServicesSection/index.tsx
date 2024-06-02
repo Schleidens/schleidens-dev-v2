@@ -1,5 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import Image from 'next/image';
+
+import web_design from '../../../../public/services/web-design.png';
+import programmer from '../../../../public/services/programmer.png';
+import experience from '../../../../public/services/experience.png';
+
 import './style.scss';
 
 function ServicesSection() {
@@ -16,6 +22,14 @@ function ServicesSection() {
 
         <div className='services__content-items'>
           <div className='item'>
+            <div className='item-icon'>
+              <Image
+                src={programmer}
+                alt='How I Can Help You'
+                width={50}
+                height={50}
+              />
+            </div>
             <div className='item-title'>How I Can Help You</div>
             <div className='item-subtitle'>
               Transforming your ideas into reality with expertise and passion.
@@ -29,6 +43,14 @@ function ServicesSection() {
           </div>
 
           <div className='item'>
+            <div className='item-icon'>
+              <Image
+                src={web_design}
+                alt='How I Can Help You'
+                width={50}
+                height={50}
+              />
+            </div>
             <div className='item-title'>Areas of Expertise</div>
             <div className='item-subtitle'>
               A Look at the Programming Languages & Frameworks Powering My Work.
@@ -42,6 +64,14 @@ function ServicesSection() {
           </div>
 
           <div className='item'>
+            <div className='item-icon'>
+              <Image
+                src={experience}
+                alt='How I Can Help You'
+                width={50}
+                height={50}
+              />
+            </div>
             <div className='item-title'>Get Ready for</div>
             <div className='item-subtitle'>
               A development experience that bridges the gap between design and
