@@ -22,28 +22,28 @@ section.services {
       h2 {
         font-size: 16px;
         font-weight: 600;
+
+        color: #7de0ea;
       }
 
       .subtitle {
         font-size: 26px;
 
         font-weight: bold;
+
+        color: #242a41;
       }
     }
 
     &-items {
       display: flex;
       flex-wrap: nowrap;
-      gap: 70px;
+      gap: 30px;
 
       width: 100%;
 
-      margin-top: 1.5em;
-
       @media (max-width: 900px) {
         flex-wrap: wrap;
-
-        gap: 0;
       }
 
       .item {
@@ -53,11 +53,51 @@ section.services {
         flex-direction: column;
         gap: 15px;
 
+        background-color: #f6f7fc;
+        color: #242f65;
+
+        border-radius: 12px;
+
+        position: relative;
+
+        padding: 1.5em;
+
+        overflow: hidden;
+        transition: background-color 0.3s ease-in-out;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0)
+          );
+          transition: transform 0.5s ease-in-out;
+          transform: scale(0);
+          border-radius: 50%;
+          z-index: 0;
+        }
+
+        &:hover::before {
+          transform: scale(1);
+        }
+
+        &:hover {
+          background-color: #e2e6f2;
+        }
+
+        > * {
+          position: relative;
+          z-index: 1;
+        }
+
         @media (max-width: 900px) {
           width: calc(100% - 70px);
-
-          margin-top: 2em;
-          padding: 0 1em;
 
           &:first-child {
             margin-top: 0 !important;
@@ -74,7 +114,7 @@ section.services {
           font-size: 15px;
           font-weight: light;
 
-          color: rgb(97, 97, 97);
+          color: #585f6f;
         }
 
         ul {
