@@ -1,8 +1,4 @@
-import Image from 'next/image';
-
 import './style.scss';
-
-import bg1 from '../../../../public/portfolio/bg1.svg';
 
 const PortfolioSection = () => {
   const projects = [
@@ -47,7 +43,10 @@ const PortfolioSection = () => {
     <section className='portfolio'>
       <div className='portfolio__content'>
         <div className='title'>
-          <h2>Portfolio</h2>
+          <h2>My projects</h2>
+          <div className='subtitle'>
+            My software gems, Take a peek at my proudest projects.
+          </div>
         </div>
 
         <div className='portfolio__content-items'>
