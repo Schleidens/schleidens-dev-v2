@@ -36,9 +36,9 @@ function ServicesSection() {
             </div>
 
             <ul>
-              <li>Full-stack Development</li>
-              <li>Product Design</li>
               <li>Front-end Development</li>
+              <li>Back-end Development</li>
+              <li>API Development</li>
             </ul>
           </div>
 

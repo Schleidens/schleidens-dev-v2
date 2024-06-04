@@ -47,7 +47,7 @@ section.services {
       }
 
       .item {
-        width: calc(33.333% - 70px);
+        width: calc(33.333% - 30px);
 
         display: flex;
         flex-direction: column;
@@ -97,7 +97,7 @@ section.services {
         }
 
         @media (max-width: 900px) {
-          width: calc(100% - 70px);
+          width: 100%;
 
           &:first-child {
             margin-top: 0 !important;
