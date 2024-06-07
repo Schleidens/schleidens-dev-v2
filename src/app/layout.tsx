@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+export const revalidate = 30;
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
