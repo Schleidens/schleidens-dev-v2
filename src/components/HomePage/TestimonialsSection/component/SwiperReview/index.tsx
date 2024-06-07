@@ -10,8 +10,6 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
 
 const SwiperReview = ({ review }: any) => {
-  console.log(review);
-
   return (
     <Swiper
       spaceBetween={50}
@@ -21,8 +19,7 @@ const SwiperReview = ({ review }: any) => {
       modules={[Autoplay, Pagination, Navigation]}
       className='swiper__box'
     >
-      {[...Array(7)].map((_, index: any) => {
-        // const review = entry.fields;
+      {review.map((review: any, index: any) => {
         return (
           <SwiperSlide key={index}>
             <div className='review'>
@@ -38,16 +35,13 @@ const SwiperReview = ({ review }: any) => {
                   <span>
                     <RiDoubleQuotesL />
                   </span>{' '}
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio mollitia ipsa impedit cum eum unde sit obcaecati,
-                  sequi culpa qui aperiam cupiditate ratione maiores repellat
-                  odio non molestiae et nobis?{' '}
+                  {review.description}{' '}
                   <span>
                     <RiDoubleQuotesR />
                   </span>
                 </p>
-                <h3 className='review-details-name'>John Doe</h3>
-                <div className='review-details-position'>CEO Nothing</div>
+                <h3 className='review-details-name'>{review.name}</h3>
+                <div className='review-details-position'>{review.at}</div>
               </div>
             </div>
           </SwiperSlide>

@@ -4,6 +4,8 @@ import PortfolioSection from '@/components/HomePage/PortfolioSection';
 import ServicesSection from '@/components/HomePage/ServicesSection';
 import TestimonialsSection from '@/components/HomePage/TestimonialsSection';
 
+export const revalidate = 30;
+
 export default function Home() {
   return (
     <Layout>
