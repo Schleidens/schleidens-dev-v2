@@ -1,68 +1,37 @@
-import { defineType, defineField, defineArrayMember } from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity'
 
 export const project = defineType({
-  type: "document",
-  name: "project",
+  type: 'document',
+  name: 'project',
   fields: [
     defineField({
-      type: "string",
-      name: "title",
+      type: 'string',
+      name: 'title',
     }),
     defineField({
-      type: "slug",
-      name: "slug",
-      options: { source: "title" },
+      type: 'text',
+      name: 'description',
     }),
     defineField({
-      type: "text",
-      name: "description",
+      name: 'tags',
+      type: 'array',
+      of: [{type: 'string'}],
     }),
     defineField({
-      type: "array",
-      name: "content",
-      of: [
-        defineArrayMember({
-          type: "block",
-        }),
-        defineArrayMember({
-          type: "image",
-          fields: [
-            {
-              type: "string",
-              name: "caption",
-            },
-          ],
-          options: { hotspot: true },
-        }),
-      ],
+      type: 'url',
+      name: 'url',
     }),
     defineField({
-      type: "array",
-      name: "tags",
-      of: [
-        defineArrayMember({
-          type: "string",
-        }),
-      ],
+      type: 'url',
+      name: 'github',
     }),
     defineField({
-      type: "url",
-      name: "url",
+      type: 'url',
+      name: 'live',
     }),
     defineField({
-      type: "url",
-      name: "github",
-    }),
-    defineField({
-      type: "image",
-      name: "image",
-      options: { hotspot: true },
-    }),
-    defineField({
-      type: "reference",
-      name: "category",
-      to: [{ type: "category" }],
+      type: 'image',
+      name: 'image',
     }),
   ],
-});
-
+})
