@@ -2,13 +2,36 @@
 
 import Image from 'next/image';
 
-import web_design from '../../../../public/services/web-design.png';
-import programmer from '../../../../public/services/programmer.png';
-import experience from '../../../../public/services/experience.png';
-
 import './style.scss';
+import { client, urlFor } from '@/services/sanityClient';
 
-function ServicesSection() {
+interface Services {
+  title: string;
+  subtitle: string;
+  description: string;
+  items: string[];
+  icon: any;
+}
+
+const getData = async () => {
+  const query = `
+*[_type == 'services'] | order(_createdAt asc) {
+  title,
+    subtitle,
+    description,
+    items,
+    icon,
+}
+  `;
+
+  const data = await client.fetch(query, {}, { next: { revalidate: 10 } });
+
+  return data;
+};
+
+const ServicesSection = async () => {
+  const services: Services[] = await getData();
+
   return (
     <section className='services'>
       <div className='services__content'>
@@ -21,73 +44,35 @@ function ServicesSection() {
         </div>
 
         <div className='services__content-items'>
-          <div className='item'>
-            <div className='item-icon'>
-              <Image
-                src={programmer}
-                alt='How I Can Help You'
-                width={50}
-                height={50}
-              />
-            </div>
-            <div className='item-title'>How I Can Help You</div>
-            <div className='item-subtitle'>
-              Transforming your ideas into reality with expertise and passion.
-            </div>
+          {services.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className='item'
+              >
+                <div className='item-icon'>
+                  <Image
+                    src={urlFor(item.icon).url()}
+                    alt='How I Can Help You'
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className='item-title'>{item.title}</div>
+                <div className='item-subtitle'>{item.subtitle}</div>
 
-            <ul>
-              <li>Front-end Development</li>
-              <li>Back-end Development</li>
-              <li>API Development</li>
-            </ul>
-          </div>
-
-          <div className='item'>
-            <div className='item-icon'>
-              <Image
-                src={web_design}
-                alt='How I Can Help You'
-                width={50}
-                height={50}
-              />
-            </div>
-            <div className='item-title'>Areas of Expertise</div>
-            <div className='item-subtitle'>
-              A Look at the Programming Languages & Frameworks Powering My Work.
-            </div>
-
-            <ul>
-              <li>React/Next | NodeJs/Express/Postgres</li>
-              <li>Vue/Nuxt | NodeJs/Express/Postgres</li>
-              <li>Python/Django | React/Next || Vue/Nuxt</li>
-            </ul>
-          </div>
-
-          <div className='item'>
-            <div className='item-icon'>
-              <Image
-                src={experience}
-                alt='How I Can Help You'
-                width={50}
-                height={50}
-              />
-            </div>
-            <div className='item-title'>Get Ready for</div>
-            <div className='item-subtitle'>
-              A development experience that bridges the gap between design and
-              functionality.
-            </div>
-
-            <ul>
-              <li>Pixel perfect Figma to clean and functional code</li>
-              <li>Code & clarity, hand in hand</li>
-              <li>Your vision, expertly coded.</li>
-            </ul>
-          </div>
+                <ul>
+                  {item.items.map((item, index) => {
+                    return <li key={index}>{item}</li>;
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default ServicesSection;
