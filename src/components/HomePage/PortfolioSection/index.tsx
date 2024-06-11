@@ -30,46 +30,6 @@ const getData = async () => {
 const PortfolioSection = async () => {
   const projects: Projects[] = await getData();
 
-  console.log(projects);
-
-  // const projects = [
-  //   {
-  //     title: 'Care-Wise',
-  //     description:
-  //       'Redesigned the website with a clean look, improving SEO, optimization and performance by 70%, which led to higher search rankings and a better user experience.',
-  //     image: 'https://ik.imagekit.io/nv2j2amfx9/care-wise.png',
-  //     tags: 'Next.js, React, SCSS, Bootstrap5, ReactStrap, Figma, Vercel',
-  //     github: '',
-  //     demo: 'https://care-wise.com/',
-  //   },
-  //   {
-  //     title: 'Good Sport Golf Club',
-  //     description:
-  //       'Work as a as a Full Stack Developer to deliver crucial features including payment integration and robust admin account management features with client-centric communication.',
-  //     image: 'https://ik.imagekit.io/nv2j2amfx9/gsgc.png',
-  //     tags: 'React, Signal, SCSS, TailwindCSS, Figma, Firebase, Nodejs, Express, Postgres, TypeORM, Paypal, Twilio/sendgrid',
-  //     github: '',
-  //     demo: 'https://goodsportgolf.com/',
-  //   },
-  //   {
-  //     title: 'We Just Chat',
-  //     description:
-  //       'A real-time chat application with user authentication, messaging functionality, and a user list feature.',
-  //     image: 'https://ik.imagekit.io/nv2j2amfx9/we-just-chat.png',
-  //     tags: 'React, Signal, SCSS, Boostrap5, Figma, Firebase, Nodejs, Express, Websocket, Postgres, Netlify, Heroku',
-  //     github: '',
-  //     demo: 'https://we-just-chat.netlify.app/',
-  //   },
-  //   {
-  //     title: 'SuperBlaBlaLand',
-  //     description:
-  //       'Work as a full-stack developer, implementing amazing features with an incredible team.',
-  //     image: 'https://ik.imagekit.io/nv2j2amfx9/superblablaland.png',
-  //     tags: 'React, Node.js, Express, Prisma, PostgreSQL, websocket,  SCSS, tailwind, Figma',
-  //     github: '',
-  //     demo: 'https://www.superblablaland.com/',
-  //   },
-  // ];
   return (
     <section className='portfolio'>
       <div className='portfolio__content'>
