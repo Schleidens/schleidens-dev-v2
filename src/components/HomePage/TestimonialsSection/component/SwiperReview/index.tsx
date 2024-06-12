@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
+import { urlFor } from '@/services/sanityClient';
 
 const SwiperReview = ({ review }: any) => {
   return (
@@ -15,6 +16,10 @@ const SwiperReview = ({ review }: any) => {
       spaceBetween={50}
       slidesPerView={1}
       navigation={true}
+      // autoplay={{
+      //   delay: 10500,
+      //   disableOnInteraction: false,
+      // }}
       pagination={{ clickable: true }}
       modules={[Autoplay, Pagination, Navigation]}
       className='swiper__box'
@@ -25,7 +30,15 @@ const SwiperReview = ({ review }: any) => {
             <div className='review'>
               <div className='review-details'>
                 <Image
-                  src='/'
+                  src={
+                    review.pfp
+                      ? urlFor(review.pfp).url()
+                      : `https://ui-avatars.com/api/?name=${review.name
+                          .split(' ')
+                          .join(
+                            '+'
+                          )}&background=583FBC&color=fff&size=130&font-size=0.5`
+                  }
                   alt='ok'
                   width={130}
                   height={130}
