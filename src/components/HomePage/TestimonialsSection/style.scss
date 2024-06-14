@@ -57,6 +57,10 @@ section.testimonials {
 
           height: 450px;
 
+          @media (max-width: 600px) {
+            height: 550px;
+          }
+
           &-details {
             width: 100%;
 

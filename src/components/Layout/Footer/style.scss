@@ -5,6 +5,8 @@ footer.footer {
 
   width: 100%;
 
+  border-top: 2px dashed #1d2130;
+
   .footer__content {
     max-width: 1281px;
     width: 100%;
@@ -12,6 +14,24 @@ footer.footer {
     padding: 1em;
 
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+
+    font-size: 16px;
+
+    color: #1d2130;
+
+    @media (max-width: 650px) {
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    a {
+      text-decoration: none;
+
+      color: #583fbc;
+    }
   }
 }
