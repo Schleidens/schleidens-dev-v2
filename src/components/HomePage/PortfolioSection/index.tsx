@@ -31,7 +31,10 @@ const PortfolioSection = async () => {
   const projects: Projects[] = await getData();
 
   return (
-    <section className='portfolio'>
+    <section
+      className='portfolio'
+      id='projects'
+    >
       <div className='portfolio__content'>
         <div className='title'>
           <h2>My projects</h2>

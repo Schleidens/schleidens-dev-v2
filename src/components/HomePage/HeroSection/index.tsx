@@ -4,7 +4,10 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 
 const HeroSection = () => {
   return (
-    <header className='hero'>
+    <header
+      className='hero'
+      id='about'
+    >
       <div className='hero__content'>
         <div className='left'>
           <div className='title'>
@@ -38,12 +41,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className='right image'>
-          <Image
+          {/* <Image
             src='/header_img.svg'
             alt='Alectine Schleidens'
             width={580}
             height={668}
-          />
+          /> */}
         </div>
       </div>
     </header>

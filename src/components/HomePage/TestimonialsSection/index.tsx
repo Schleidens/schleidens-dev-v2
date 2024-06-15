@@ -32,7 +32,10 @@ const TestimonialsSection = async () => {
   const review: Review = await getData();
 
   return (
-    <section className='testimonials'>
+    <section
+      className='testimonials'
+      id='testimonials'
+    >
       <div className='testimonials__content'>
         <div className='title'>
           <h2>Reviews</h2>

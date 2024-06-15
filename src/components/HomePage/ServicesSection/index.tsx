@@ -33,7 +33,10 @@ const ServicesSection = async () => {
   const services: Services[] = await getData();
 
   return (
-    <section className='services'>
+    <section
+      className='services'
+      id='services'
+    >
       <div className='services__content'>
         <div className='title'>
           <h2>Services</h2>

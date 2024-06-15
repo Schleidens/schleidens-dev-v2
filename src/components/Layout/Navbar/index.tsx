@@ -10,21 +10,21 @@ const Navbar = () => {
         <div className='nav-list'>
           <ul>
             <li>
-              <Link href='/'>Home.</Link>
+              <Link href='/#about'> About me.</Link>
             </li>
             <li>
-              <Link href='/'> About me.</Link>
+              <Link href='/#services'>Services.</Link>
             </li>
             <li>
-              <Link href='/'>Projects.</Link>
+              <Link href='/#projects'>Projects.</Link>
             </li>
             <li>
-              <Link href='/'>Testimonials.</Link>
+              <Link href='/#testimonials'>Testimonials.</Link>
             </li>
           </ul>
           <a
             className='book__call'
-            href='http://'
+            href='https://calendly.com/alectineschleidens2016/chat'
             target='_blank'
             rel='noopener noreferrer'
           >
