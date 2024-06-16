@@ -18,7 +18,7 @@ section.cta-section {
 
     gap: 10px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1170px) {
       flex-wrap: wrap;
       justify-content: flex-start;
       gap: 30px;
@@ -50,6 +50,15 @@ section.cta-section {
           color: #fff;
 
           border-radius: 12px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+
+          svg {
+            font-size: 20px;
+          }
         }
       }
     }

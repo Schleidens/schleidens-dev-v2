@@ -38,7 +38,7 @@ const TestimonialsSection = async () => {
     >
       <div className='testimonials__content'>
         <div className='title'>
-          <h2>Reviews</h2>
+          <h2>Testimonials</h2>
 
           <div className='subtitle'>
             Beyond the Code, Reviews That Show the Impact of My Work

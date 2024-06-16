@@ -1,4 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
+
+import { FaLinkedin } from 'react-icons/fa6';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
+
 import './style.scss';
 
 const CtaSection = () => {
@@ -12,13 +16,13 @@ const CtaSection = () => {
               href='https://linkedin.com/in/alectineschleidens'
               target='_blank'
             >
-              My Linkedin
+              <span>My Linkedin</span> <FaLinkedin />
             </a>
             <a
               href=''
               target='_blank'
             >
-              Download my CV
+              <span>Download my CV</span> <FaCloudDownloadAlt />
             </a>
           </div>
         </div>

@@ -36,9 +36,11 @@ section.testimonials {
     }
 
     .swiper__box {
-      @media (max-width: 900px) {
-        .swiper-button-prev,
-        .swiper-button-next {
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: #7de0ea;
+
+        @media (max-width: 900px) {
           display: none;
         }
       }
