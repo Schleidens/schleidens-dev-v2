@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import './style.scss';
 import { FaArrowRightLong } from 'react-icons/fa6';
@@ -11,11 +12,15 @@ const HeroSection = () => {
       <div className='hero__content'>
         <div className='left'>
           <div className='title'>
-            Hey! <span>{"I'm"} Alectine</span> <br />{' '}
+            Hey! <span>I'm Alectine</span> <br />{' '}
             <span className='schleidens'>Schleidens</span>
           </div>
           <div className='description'>
-            <p>Creative Fullstack Software Developer & Problem Solver</p>
+            <p>
+              I am a software developer specializing in building user-friendly
+              web-apps. Problem solver, calm under pressure, quick learner with
+              the goal of customer satisfaction.
+            </p>
           </div>
 
           <div className='call_to_action_btn'>
