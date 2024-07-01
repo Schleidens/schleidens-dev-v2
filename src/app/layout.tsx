@@ -13,9 +13,9 @@ const url = new URL('https://www.schleidens.dev/');
 
 export const metadata: Metadata = {
   icons: {
-    icon: ['/public/favicon.ico'],
-    apple: ['/public/apple-touch-icon.png?v=4'],
-    shortcut: ['/public/apple-touch-icon.png'],
+    icon: ['/favicon.ico'],
+    apple: ['/apple-touch-icon.png?v=4'],
+    shortcut: ['/apple-touch-icon.png'],
   },
   title: 'Alectine Schleidens - Fullstack Software Developer',
   description:
