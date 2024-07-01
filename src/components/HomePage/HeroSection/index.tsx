@@ -37,7 +37,7 @@ const HeroSection = () => {
             </a>
             <a
               className='download_cv'
-              href='/public/docs/SchleidensAlectineResume.pdf'
+              href='/public/SchleidensAlectineResume.pdf'
               target='_blank'
               rel='noopener noreferrer'
               download
