@@ -37,7 +37,7 @@ const HeroSection = () => {
             </a>
             <a
               className='download_cv'
-              href='/public/SchleidensAlectineResume.pdf'
+              href='https://drive.google.com/file/d/1BEmsDX-fRPlITlgXVqYc6j6HO5HX8ini/view?usp=sharing'
               target='_blank'
               rel='noopener noreferrer'
               download
