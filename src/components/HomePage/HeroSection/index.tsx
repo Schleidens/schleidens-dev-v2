@@ -37,9 +37,10 @@ const HeroSection = () => {
             </a>
             <a
               className='download_cv'
-              href='http://'
+              href='/public/docs/SchleidensAlectineResume.pdf'
               target='_blank'
               rel='noopener noreferrer'
+              download
             >
               Download my CV
             </a>

@@ -19,8 +19,9 @@ const CtaSection = () => {
               <span>My Linkedin</span> <FaLinkedin />
             </a>
             <a
-              href=''
+              href='/public/docs/SchleidensAlectineResume.pdf'
               target='_blank'
+              download
             >
               <span>Download my CV</span> <FaCloudDownloadAlt />
             </a>
