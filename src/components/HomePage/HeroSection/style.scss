@@ -156,6 +156,13 @@ header.hero {
         height: 100%;
         width: auto !important;
 
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: 'FlipH';
+
         @media (max-width: 900px) {
           max-height: 568px !important;
         }

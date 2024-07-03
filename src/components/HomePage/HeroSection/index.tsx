@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import './style.scss';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import schleidens_hero_img from '../../../../public/Schleidens.svg';
 
 const HeroSection = () => {
   return (
@@ -47,12 +48,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className='right image'>
-          {/* <Image
-            src='/header_img.svg'
+          <Image
+            src='/Schleidens.svg'
             alt='Alectine Schleidens'
             width={580}
             height={668}
-          /> */}
+          />
         </div>
       </div>
     </header>
