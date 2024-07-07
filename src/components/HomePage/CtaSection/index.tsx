@@ -2,15 +2,23 @@
 
 import { FaLinkedin } from 'react-icons/fa6';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
-
 import './style.scss';
+import Image from 'next/image';
 
 const CtaSection = () => {
   return (
     <section className='cta-section'>
       <div className='cta-section__content'>
         <div className='info'>
-          <h3>Let's turn visions into reality.</h3>
+          <div className='header'>
+            <Image
+              src='/apple-touch-icon.png'
+              alt='Alectine Schleidens'
+              width={580}
+              height={668}
+            />
+            <h3>Let's turn visions into reality.</h3>
+          </div>
           <div className='links'>
             <a
               href='https://linkedin.com/in/alectineschleidens'

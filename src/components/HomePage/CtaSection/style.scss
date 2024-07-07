@@ -31,11 +31,28 @@ section.cta-section {
     }
 
     .info {
-      h3 {
-        font-weight: bold;
-        font-size: 29px;
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
 
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
+
+        img {
+          height: 46px;
+          width: 46px;
+
+          object-fit: cover;
+          border-radius: 50%;
+        }
+        h3 {
+          font-weight: bold;
+          font-size: 29px;
+
+          margin: 0;
+          padding: 0;
+        }
       }
 
       .links {
