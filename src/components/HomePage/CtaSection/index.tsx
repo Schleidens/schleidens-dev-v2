@@ -12,7 +12,7 @@ const CtaSection = () => {
         <div className='info'>
           <div className='header'>
             <Image
-              src='/apple-touch-icon.png'
+              src='/Schleidens_icon.png'
               alt='Alectine Schleidens'
               width={580}
               height={668}
